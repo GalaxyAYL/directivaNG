@@ -1,0 +1,39 @@
+<button>PAgina recuperar</button>
+<p>PAGINA FUNCIONANDO</p>
+<br>
+
+<!------------------------------------------------------------------------->
+    <hr>
+    <p>COMPARADOR DE NUMERO</p>
+<input [(ngModel)]="numero">
+<p *ngIf="numero>5 && numero != ''">{{numero}}: mayor que 5</p>
+<p *ngIf="numero<5 && numero != ''">{{numero}}: menor que 5</p>
+
+<!------------------------------------------------------------------------->
+    <hr>
+    <p>ALMACENAMIENTO LOCAL</p>
+    <input [(ngModel)]="almacenamiento"input>
+    <button click="almacenamientoManual()">Almacenar</button> 
+    
+    <p>Valor almacenado: {{almacenamiento}}</p>   
+    <hr>
+<!------------------------------------------------------------------------->
+    <p> ARRAY SUELDOS</p>
+<table border="1px" *ngFor="let sueldo of sueldos">
+    <tr >
+        <td>{{sueldo}}</td>
+    </tr>
+</table>
+
+<!------------------------------------------------------------------------->
+<ul *ngFor="let sueldo of sueldos">
+    <li>{{sueldo}}</li>
+</ul>
+
+<!------------------------------------------------------------------------->
+<div>
+    <p *ngFor="let sueldo of sueldos">Sueldo: {{sueldo}}</p>
+</div>
+
+<hr>
+<p>SIGUIENTE</p>
